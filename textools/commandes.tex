@@ -1,0 +1,86 @@
+% Set minted env. for terminal-like output
+\newminted[terminal]{shell}{%
+  bgcolor=black,fontsize=\small,formatcom=\color{white},
+  style=perldoc
+  % inenos,% line numbers
+}
+\newminted[terminal-petit]{shell}{%
+  bgcolor=black,fontsize=\scriptsize,formatcom=\color{white},
+  style=perldoc
+  % inenos,% line numbers
+}
+
+% Set minted env. for cmake emacs-like output
+\definecolor{cmakebg}{rgb}{0.95,1.0,0.97}
+\definecolor{codebg}{rgb}{0.95,1.0,0.97}
+\definecolor{cppcolor}{RGB}{255,224,178}
+\definecolor{fortrancolor}{RGB}{204,204,255}
+
+\newminted[cmake]{cmake}{
+  bgcolor=cmakebg,fontsize=\small,
+  % inenos,% line numbers
+}
+\newminted[cmake-petit]{cmake}{
+  bgcolor=cmakebg,fontsize=\scriptsize,
+  % inenos,% line numbers
+}
+
+\newminted[fortran]{fortran}{
+  bgcolor=fortrancolor,fontsize=\small,
+  % inenos,% line numbers
+}
+\newminted[c++]{c++}{
+  bgcolor=cppcolor,fontsize=\small,
+  % inenos,% line numbers
+}
+\newminted[c++-petit]{c++}{
+  bgcolor=cppcolor,fontsize=\scriptsize,
+  % inenos,% line numbers
+}
+\newminted[fortran-petit]{fortran}{
+  bgcolor=fortrancolor,fontsize=\scriptsize,
+  % inenos,% line numbers
+}
+
+
+\definecolor{yellowgit}{RGB}{254,245,134}
+\definecolor{snapgit}{RGB}{255,204,153}
+\definecolor{branchgit}{RGB}{204,153,255}
+\definecolor{vert}{rgb}{0.60,0.80,0.00}
+% Couleurs pour schémas mémoire openmp
+\definecolor{sharedmem}{HTML}{FFCC99}
+\definecolor{privatemem}{HTML}{FF0000}
+\definecolor{tmpmem}{HTML}{B7C9E3}
+
+\newcommand\stabilo[1]{\colorbox{yellowgit}{#1}}
+\newcommand\mycolor[1]{\textcolor{blue1}{#1}}
+\newcommand\maincolor[1]{\textcolor{maincolor}{#1}}
+\newcommand\enval[1]{\textbf{\textcolor{maincolor}{#1}}}
+
+
+\newcommand{\textweb}[1]{\scriptsize\textit{\textcolor{grey2}{\url{#1}}}}
+\newcommand{\html}[1]{{\scriptsize \textcolor{grey2}{\url{#1}}}}
+\newcommand{\publi}[1]{\begin{spacing}{0.8}\tiny \textcolor{myblue}{#1}\end{spacing}}
+
+
+
+\definecolor{yamlcolor}{rgb}{0.95,1.0,0.97}
+\newminted[yaml]{yaml}{
+  bgcolor=yamlcolor,fontsize=\small,
+  % inenos,% line numbers
+}
+\newcommand\bien{\emoji{+1}}
+\newcommand{\clause}[1]{\colorbox{cyanvif}{\textcolor{black}{\textsf{\textup{#1}}}}}
+\newcommand{\dir}[1]{\colorbox{fortrancolor}{\textcolor{black}{\textsf{\textup{#1}}}}}
+\newcommand{\doubledir}[2]{\colorbox{fortrancolor}{#1}/\colorbox{cppcolor}{#2}}
+\newcommand{\fortrandir}[1]{\colorbox{fortrancolor}{#1}}
+\newcommand{\cppdir}[1]{\colorbox{cppcolor}{#1}}
+\newcommand{\mpicode}[1]{\textcolor{red}{#1}}
+
+\definecolor{vert}{rgb}{0.60,0.80,0.00}
+\newif\ifpublished
+\ifthenelse{\equal{\detokenize{published}}{\jobname}}{
+\publishedtrue
+}{
+\publishedfalse
+}

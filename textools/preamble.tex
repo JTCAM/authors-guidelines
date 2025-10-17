@@ -1,0 +1,68 @@
+% Chemin vers conf latex
+\makeatletter
+\def\input@path{{./textools/}{.}}
+\makeatother
+% Chemin vers les images
+\graphicspath{{./figures/}}
+
+
+% --- Packages latex ---
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage[utf8x]{inputenc}
+\usepackage{minted}
+\usepackage{tikz}
+\usepackage{tikzpagenodes} 
+\usetikzlibrary{shapes, arrows, decorations, decorations.pathreplacing}
+\hypersetup{bookmarksopen=true,bookmarksopenlevel=4}
+\setcounter{tocdepth}{4}
+%\usepackage{hwemoji}
+%\usepackage{emoji}
+\usepackage{multido}
+\usepackage{xmpmulti}
+\usepackage[absolute,overlay]{textpos}
+
+% --- Commandes ---
+\input{commandes}
+
+% --- Beamer setup ---
+\usetheme{default}%Madrid}
+\usecolortheme{RR}
+%\usefonttheme{structureitalicserif}
+\usefonttheme{professionalfonts}
+\useinnertheme{circles}% [shadow]{Franck}
+%\setbeamertemplate{sections/subsections in toc}[circle]
+
+\useoutertheme{RR}
+%\setbeamerfont{section title}{size=\scriptsize,shape=\itshape,series=\bfseries}
+\setbeamersize{text margin left=1em,text margin right=1em}
+
+
+% % Gestion de la toc
+% \makeatletter
+% \AtBeginPart{\beamer@tocsectionnumber=0\relax\c@section=0}
+% \makeatother
+% \makeatletter
+% \AtBeginPart{%
+%   \addtocontents{toc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
+% }
+% %% number, shortname, page.
+% \providecommand\beamer@partintoc[3]{%
+%   \ifnum\c@tocdepth=-1\relax
+%     % requesting onlyparts.
+%     \makebox[6em]{#1 - } #2
+%     \par
+%   \fi
+% }
+% \define@key{beamertoc}{onlyparts}[]{%
+%   \c@tocdepth=-1\relax
+% }
+% \makeatother%
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

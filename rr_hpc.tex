@@ -1,0 +1,784 @@
+\section{Introduction et contexte général}
+\subsection{Les enjeux de la recherche reproductible}
+\begin{frame}
+\frametitle{Reproductibilité : une définition générale}
+On dispose :
+\begin{itemize}
+  \item d'une publication,
+  \item du code et du jeu de données associés 
+\end{itemize}
+
+~\\
+On voudrait :  
+\begin{itemize}
+  \item changer un paramètre et reproduire une figure
+  \item ajouter une contribution au code pour étendre ses fonctionnalités
+\end{itemize}
+
+~\\
+Qui ? 
+  \begin{itemize}
+      \item le chercheur lui-même
+      \item des membres de son équipe
+      \item d'autres chercheurs
+  \end{itemize}
+  \begin{itemize}  
+       \item[\ding{220}] \textcolor{maincolor}{maintenant ou plus tard}
+  \end{itemize}
+
+\end{frame}
+
+
+%%---------------------------------------------------------------
+\begin{frame}
+\frametitle{Motivations}
+
+%\setbeamercolor{block title}{bg=myblue3, fg=white}
+%\setbeamercolor{block body}{bg=myblue3!15}
+\setbeamercolor{block body}{bg=white}
+
+\begin{block}{L'intérêt d'assurer la reproductibilité des résultats ?}
+\begin{itemize}
+\item Pour gagner du temps \textcolor{maincolor}{pour vous} : \\
+\end{itemize}
+
+\mycolor{Exemples :}
+
+  \begin{itemize}
+\item[\ding{220}] vous avez une suggestion d'un lecteur, d'un collègue pour améliorer un point
+  \item[\ding{220}] vous reprenez votre code 5 ans après ...
+  \item[\ding{220}] Un étudiant en thèse veut comparer ses résultats avec ceux d'un étudiant précédent \\  
+  \end{itemize}
+
+ \begin{itemize}
+\item Pour faciliter la réutilisation de votre travail, même localement \\   
+\end{itemize}
+ 
+\end{block}
+
+\end{frame}
+
+
+
+%%---------------------------------------------------------------
+\begin{frame}
+\frametitle{Bénéfices pour la recherche}
+
+%\setbeamercolor{block title}{bg=myblue3, fg=white}
+%\setbeamercolor{block body}{bg=myblue3!15}
+\setbeamercolor{block body}{bg=white}
+
+\begin{itemize}
+\item Donner confiance au lecteur/reviewer \\  
+\item Augmenter la rapidité de diffusion des savoirs
+\item Augmenter l'efficacité de la recherche en réutilisant des choses déjà faites
+\item Augmenter la qualité de la recherche : un bug peut être signalé
+\item Favorise les collaborations : des contributions peuvent être apportées, ...\\
+\end{itemize}
+~\\
+\mycolor{\ding{220}  Augmenter la confiance dans les produits de la recherche, pour soi, pour les collègues et pour le grand public en général}
+
+\end{frame}
+
+
+%%---------------------------------------------------------------
+\begin{frame}
+  \frametitle{En pratique, pour le lecteur d'une publication}
+  \vspace{-0.5cm}
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+De quoi a-t-on besoin ?
+  \begin{itemize}
+      \item article, disponible sur une archive
+      \item code, disponible grâce à un lien web, un identifiant pérenne
+      \item jeu de données, disponible sur le web (une page ou un entrepôt)
+\end{itemize} 
+  \end{column}
+%%%
+\begin{column}{0.5\textwidth}
+\includegraphics[width=5cm]{./figures/dessin_RR.png}
+\end{column}
+%
+\end{columns}
+~\\
+\mycolor{\ding{220}} Les principes de la \mycolor{Science Ouverte} offre un cadre idéal pour assurer la reproductibilité d'un travail.
+\end{frame}
+
+
+%%--------------------------------------------------------------
+\begin{frame}
+\frametitle{Contexte légal : science ouverte}
+
+\begin{block}{Cadre légal}
+\begin{itemize}
+\item Science Ouverte : loi pour une république numérique, plan  \\
+\item Loi pour l'intégrité scientifique \\   
+\end{itemize}
+
+\mycolor{Obligations}
+
+\begin{itemize}
+\item[\ding{220}] on doit ouvrir ses données, ses codes et ses publications 
+\item[\ding{220}] 
+\item[\ding{220}]  
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+%%--------------------------------------------------------------
+\begin{frame}
+\frametitle{Contexte général : science ouverte}
+
+\begin{block}{Organismes français}
+\begin{itemize}
+\item[\ding{220}] COSO :
+  \begin{itemize}
+  \item assure la mise ne \oe uvre de la politique de Science Ouverte
+  \item édite des guides de bonnes pratiques : passeports pour la science ouverte
+\end{itemize}    
+\item[\ding{220}] Ateliers de la donnée : gestion des données de la recherche 
+\item[\ding{220}]  
+\end{itemize}
+\end{block}
+
+
+\begin{block}{Organismes à l'international}
+\begin{itemize}
+\item[\ding{220}] Politiques et projets européens autour de l'Open Science 
+  
+\item[\ding{220}] Ateliers de la donnée : gestion des données de la recherche 
+\item[\ding{220}]  
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+%%--------------------------------------------------------------
+\begin{frame}
+\frametitle{Contexte général : intégrité scientifique}
+
+\begin{block}{}
+\begin{itemize}
+\item Ouvrir ses données, ses codes, ses artciles sauf impossibilité   \\
+\item Les référencer correctement \\   
+\end{itemize}
+
+\mycolor{Science ouverte == socle de la reproductibilité}
+\end{block}
+
+\end{frame}
+
+
+
+\subsection{Contexte historique}
+%%---------------------------------------------------------------
+\begin{frame}
+\frametitle{Historique}
+\vspace{-0.4cm}
+%\begin{block}{Diverses études sur la reproductibilité des résultats : meta-science}
+  \footnotesize
+\begin{itemize}\footnotesize
+\item 2016 : Questionnaire en ligne envoyé à 1576 chercheurs de disciplines très différentes
+  \begin{itemize}\footnotesize
+  \item 70 $\%$ ont échoué à reproduire un travail effectué par un autre chercheur
+  \item + de 50 $\%$ ont échoué à reproduire leur propre expérience \\
+ \publi{Baker M. 2016, 1,500 scientists lift the lid on reproducibility, Nature 533:452–454}
+\end{itemize}
+\end{itemize}
+\vspace{-0.25cm}
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+\hspace{2cm}\includegraphics[width=4cm]{./figures/Nature_2.png}
+  \end{column}
+%%%
+\begin{column}{0.5\textwidth}
+\includegraphics[width=4cm]{./figures/Nature_1.png}
+\end{column}
+%
+\end{columns}
+%\end{block}
+\end{frame}
+
+%%---------------------------------------------------------------
+\begin{frame}
+  \frametitle{Causes du manque de reproductibilité}
+\setbeamercolor{block body}{bg=white}
+
+\begin{itemize}
+      \item fraude, erreur humaine  \\
+      \item manque de sensibilisation / formation / support sur ces enjeux
+      \item course à la publication : manque de temps
+      \item ...
+\end{itemize}
+
+\end{frame}
+
+%%---------------------------------------------------------------
+\begin{frame}
+\frametitle{Historique}
+\vspace{-0.4cm}
+\begin{block}{Diverses études sur la reproductibilité des résultats : méta-recherche}
+\footnotesize
+\begin{itemize}
+\footnotesize  
+\item Economie
+  \begin{itemize}
+   \footnotesize 
+  \item Reproductibilité de 60 articles (données + code + préanalyse disponibles)
+  \item 1/3 papiers reproduits, +10$\%$ après contact avec les auteurs
+    \publi{Chang, Andrew C., and Phillip Li. 2017. "A Preanalysis Plan to Replicate Sixty Economics Research Papers That Worked Half of the Time." American Economic Review, 107 (5): 60–64. DOI: 10.1257/aer.p20171034}
+  \end{itemize}
+  \footnotesize
+  \vspace{-0.3cm}
+\item Psychologie appliquée
+  \begin{itemize}
+    \footnotesize
+  \item Reproductibilité de 35 articles publiés entre 2015 et 2018 dans la revue \textit{Cognition} (données disponibles)
+  \item 11 articles reproduits, 11 après contacts avec les auteurs : 63$\%$ max \\
+    \publi{Estimating the Prevalence of Transparency and Reproducibility-Related Research Practices in Psychology (2014–2017), Tom E. Hardwicke, Robert T. Thibault, […], and John P. A. Ioannidis, Volume 17, Issue 1, https://doi.org/10.1177/1745691620979806 }
+  \end{itemize}
+  \footnotesize
+  \vspace{-0.3cm}
+\item Ten Years Reproducibility Challenge Oct 11, 2019
+  \begin{itemize}
+   \footnotesize 
+  \item Objectif : refaire tourner son code publié 10 ans après 
+  \item Difficultés : retrouver le code + env. logiciel \\
+   \publi{Challenge to scientists: does your ten-year-old code still run? Nature vol. 584 iss. 7822, 2020}
+  \end{itemize}  
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+
+
+
+%%---------------------------------------------------------------
+\begin{frame}
+  \frametitle{Contexte international}
+  \vspace{-0.5cm}
+  \begin{itemize}
+  \item Beaucoup de communautés différentes se sont emparées du sujet
+  \item Création de plusieurs réseaux en Europe et dans le monde  : UKRN en 2019,...
+  \item Projets européens : horizon europe (programme européen
+pour la recherche et l'innovation) --> projets autour de la metascience et de la reproductibilité (OSIRIS, TRUSTparency, iRISE, ...) 
+  \end{itemize}
+  \vspace{0.5cm} 
+  \centering
+\includegraphics[height=2.5cm]{./figures/world-map.png}\\
+  
+\end{frame}
+
+%%---------------------------------------------------------------
+\begin{frame}
+  \frametitle{Contexte français}
+  \vspace{-0.5cm}  
+
+\hspace{10cm}\includegraphics[height=1.5cm]{./figures/FRRN_logo_crop.png}\\
+%\hspace{10cm}\html{https://www.recherche-reproductible.fr}
+  \begin{itemize}
+  \item 2022 : création du réseau français
+    \item fort soutien du ministère
+  \end{itemize}
+  
+  \begin{itemize}
+  \item adhésion : abonnement à la liste de diffusion
+  \item Vous pouvez contribuer :
+      \begin{itemize}
+      \item proposer des wébinaires
+      \item contribuer au GT ``Logiciels'' (rédiger des fiches de bonnes pratique)
+      \item alimenter la base de données bibliograhique
+      \item proposer une synthèse d'un article en lien avec la reproductibilité 
+      \end{itemize}
+  \end{itemize}
+
+\hspace{10cm}\html{https://www.recherche-reproductible.fr}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Les revues évoluent également}
+
+\begin{block}{Publications}
+ \begin{itemize}\footnotesize
+ \item Revues qui ont des pré-requis (variable en fonction des disciplines)
+   \begin{itemize}\footnotesize
+   \item IPOL (machine learning), Computo (statistique), ReScience C (numérique) 
+   \end{itemize}  
+ \item Badges de l'ACM (Association for Computing Machinery) : \html{https://www.acm.org/publications/policies/artifact-review-and-badging-current}
+ \item CASCAD en économie (\html{https://www.cascad.tech/})
+ \end{itemize} 
+\end{block}
+%
+\end{frame}
+
+
+
+\subsection{Terminologie}
+%%---------------------------------------------------------------
+\begin{frame}
+\frametitle{Définitions / thématiques}
+\vspace{-0.2cm}
+\begin{block}{Différents type de reproductibilité en fonction des contextes de recherche}
+\footnotesize
+\begin{itemize}  
+\item \mycolor{statistique} : trace de la raison qui fait qu'un résultat est significatif au sens statistique
+    \begin{itemize}\footnotesize
+    \item justification du choix du test statistique
+    \item choix des paramètres du modèle
+    \item des valeurs de seuil, de la taille des échantillons
+    \end{itemize}  
+\item \mycolor{empirique} : trace des conditions dans lesquelles l’expérience a eu lieu
+        \begin{itemize}\footnotesize
+        \item paramètres : le PH, la température…,
+        \item ingrédients qui ont composé cette expérience (les espèces chimiques, ...)
+        \item protocole suivi pour la réaliser (ordre des étapes, matériel utilisé…).
+        \end{itemize}  
+        \mycolor{\ding{220}} La reproductibilité empirique est souvent difficile à atteindre parce que certaines expériences requièrent une précision importante dans la reproduction des conditions expérimentales (dosage exact des composants…).
+ \end{itemize}         
+\end{block}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Définitions / thématiques}
+\vspace{-0.2cm}
+\begin{block}{Différents type de reproductibilité en fonction des contextes de recherche}
+\footnotesize
+\begin{itemize}
+
+      \item \mycolor{computationnelle} : trace de la production d'un résultat sur ordinateur
+    \begin{itemize}\footnotesize
+    \item codes informatiques utilisés + leur version + enchainement
+    \item environnement logiciel, type de machine, logiciels installés utilisés
+    \item les jeux de données
+    \end{itemize}
+    \mycolor{\ding{220}} Pour la reproductibilité computationnelle : il existe plein d'outils informatiques qui facilitent grandement le travail !
+  \end{itemize}
+
+\end{block}
+\end{frame}
+
+
+%%---------------------------------------------------------------
+\begin{frame}
+  \frametitle{Définitions qui font consensus pour le calcul numérique}
+  \vspace{-0.5cm}
+  \begin{itemize}
+      \item \mycolor{Reproductibilité} : en utilisant le même code (protocole, ..) et les mêmes données,
+      on aboutit à des \textit{conclusions/résultats/..} \mycolor{identiques}
+      \item \mycolor{Réplicabilité} : en prenant un jeu de données différents et/ou
+      une implémentation différente de la méthode, on aboutit à des \textit{conclusions/résultats/..} \mycolor{équivalents}
+  \end{itemize}
+  \vspace{-0.2cm}
+\centering
+\begin{figure}
+\includegraphics[width=6cm]{./figures/reproducible-matrix.jpg}
+\end{figure}
+\publi{The turing way: https://book.the-turing-way.org/}
+
+\vspace{0.3cm}
+Chaque domaine de recherche a ses contraintes propres !
+\end{frame}
+
+
+
+
+%%## Partie II : reproductibilité computationnelle et HPC
+%%---------------------------------------------------------------
+\section{Reproductibilité computationnelle}
+\subsection{Problématique}
+\begin{frame}
+  \frametitle{Exemples de problèmes de reproductibilité en calcul scientifique}
+  %\framesubtitle{version + options du compilateur}
+
+\begin{tabular}{lr}
+
+\end{tabular}
+
+\vspace{-0.5cm}  
+   
+\centering
+\hspace{2cm}
+\begin{tabular}{lr}
+Le code & Les dépendances \\  
+\includegraphics[height=3cm]{./figures/make-arbre-dependances.png}
+& \includegraphics[height=3.5cm]{./figures/maven-tree-plugin.png}\\
+\end{tabular}
+\end{frame}
+
+%%---------------------------------------------------------------
+\begin{frame}
+  \frametitle{Exemples de problèmes de reproductibilité en calcul scientifique}
+  \framesubtitle{version + options de python + dépendances}
+  Version de python :\\
+  En Python 3.6, les valeurs par défaut de rel$\_$tol et abs$\_$tol ont été ajustées : 
+\begin{tabular}{|c|c|}
+\hline
+python3.5 & python3.6 \\
+import math & import math \\
+math.isclose(1.0, 1.0000001) :: False & math.isclose(1.0, 1.0000001) :: True \\
+\hline
+\end{tabular}
+
+\end{frame}
+
+%%---------------------------------------------------------------
+\begin{frame}[fragile]
+  \frametitle{Exemples de problèmes de reproductibilité en calcul scientifique}
+  %\framesubtitle{version + options de python + dépendances}
+  \mycolor{Dépendances} : changement de syntaxe \\
+ \vspace{-0.2cm}  
+ \begin{minted}[bgcolor=gray!10,fontsize=\scriptsize]{python}
+import numpy
+arr = np.array([[1, 2], [1, 2]])   
+\end{minted} 
+ \begin{tabular}{|c|c|}
+\hline
+NumPy 1.13 & NumPy >= 1.13 \\
+np.unique(arr) & np.unique(arr, axis=0) \\
+Résultat : array([1, 2])  & Résultat : array([[1, 2]]) \\
+\hline
+ \end{tabular}
+
+
+ \vspace{0.25cm} 
+
+
+\begin{tabular}{|c|c|}
+\hline
+Pandas < 0.20 & Pandas >= 0.20 \\
+df.sort('column$\_$name') &df.sort$\_$values('column$\_$name') \\
+\hline
+\end{tabular}
+\end{frame}
+
+
+
+%%---------------------------------------------------------------
+\begin{frame}[fragile]
+  \frametitle{Exemples de problèmes de reproductibilité en calcul scientifique}
+  %\framesubtitle{version + options de python + dépendances}
+  \mycolor{Dépendances} : résultat d'une fonction 
+\vspace{0.15cm}
+\begin{minted}[bgcolor=gray!10,fontsize=\scriptsize]{python}
+import random
+random.seed(42)
+data = [1, 2, 3, 4, 5]
+random.shuffle(data)
+print(data)
+\end{minted}
+
+\begin{tabular}{|c|c|}
+\hline
+random 3.2 & random 3.3+ \\
+Résultat : [4, 2, 3, 5, 1] & Résultat : [1, 5, 2, 4, 3] \\
+\hline
+\end{tabular}
+\end{frame}
+
+
+
+
+%%---------------------------------------------------------------
+\begin{frame}[fragile]
+
+\frametitle{Exemples de problèmes de reproductibilité en calcul scientifique}
+\framesubtitle{Parallélisation avec OpenMP}
+\vspace{-0.25cm}
+  $$H_n = \sum_{k=1}^n 1/k = ln(n) + \gamma +o(1)$$
+\begin{itemize}
+\item Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz 
+\item gfortran 14 -fopenmp 
+\end{itemize}
+
+\begin{minted}[bgcolor=gray!10,fontsize=\scriptsize]{fortran}
+Gamma = 0.5772156649015328606
+!$OMP parallel do private(i) reduction(+ : sum)
+do i=1,n
+   sum = sum + 1.0/i
+enddo
+!$OMP end parallel do 
+p = abs(sum - log(float(n)) - Gamma)
+\end{minted}
+\end{frame}
+
+
+
+%%---------------------------------------------------------------
+\begin{frame}[fragile]
+
+\frametitle{Problèmes de reproductibilité : parallélisation avec OpenMP}
+%\framesubtitle{Parallélisation avec OpenMP}
+\vspace{-0.25cm}
+\footnotesize
+n= 1000000 \\
+
+\begin{tabular}{|c|c|c|}
+\hline  
+Calcul & séquentiel & OpenMP 1 thread  \\
+\hline
+sum &14.392726788474306  &14.392726788474306  \\
+p   &3.6711810480483109E-007 &3.6711810480483109E-007 \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|}
+\hline  
+ OpenMP 4 threads & OpenMP 4 threads -Ofast \\
+\hline
+14.392726\maincolor{788474306} &14.392726\maincolor{222394913} \\
+ 3.6711810480483109E-007 &1.9896128833352122E-007 \\
+\hline
+\end{tabular}
+
+
+
+\vspace{0.2cm}
+\footnotesize
+n= 100000000 \\
+
+\begin{tabular}{|c|c|c|}
+\hline  
+Calcul & séquentiel & OpenMP 1 thread  \\
+\hline
+sum & 18.9978964\maincolor{82991536}  & 18.9978964\maincolor{82991536}  \\
+p   & 1.8830363046618004E-007  & 1.8830363046618004E-007 \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|c|c|c|}
+\hline  
+ OpenMP 4 threads & OpenMP 4 threads -Ofast \\
+\hline
+ 18.9978964\maincolor{79461851} & 18.99789\maincolor{5850727968}  \\
+ 1.9183331545491455E-007 & 8.2056719818979218E-007\\
+\hline
+\end{tabular}
+\end{frame}
+
+
+
+
+
+
+%%---------------------------------------------------------------
+\begin{frame}[fragile]
+
+\frametitle{Problèmes de reproductibilité en calcul scientifique : calcul sur GPU}
+%\framesubtitle{Calcul sur GPU}
+\vspace{-0.25cm}
+  $$H_n = \sum_{k=1}^n 1/k = ln(n) + \gamma +o(1)$$
+\begin{itemize}
+\item Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz 
+\item 1 GPU nvidia V100
+\item nvfortran 22.3-0 64-bit target on x86-64 Linux
+\end{itemize} 
+\begin{minted}[bgcolor=gray!10,fontsize=\scriptsize]{fortran}
+Gamma = 0.5772156649015328606
+!$acc kernels copy(sum)
+devicetype = acc_get_device_type()
+ngpus = acc_get_num_devices(devicetype)
+do i=1,n
+   sum = sum + 1.0/i
+enddo
+!$acc end kernels
+p = abs(sum - log(float(n)) - Gamma)
+\end{minted}
+\end{frame}
+%%---------------------------------------------------------------
+\begin{frame}[fragile]
+
+  \frametitle{Exemples de problèmes de reproductibilité en calcul scientifique}
+  %\framesubtitle{calcul parallèle / GPU}
+
+\footnotesize
+n= 1000000 \\
+
+\begin{tabular}{|c|c|c|c|}
+\hline  
+Calcul & CPU & CPU option fast & GPU \\
+\hline
+sum &14.39272678847431  & 14.39272678847431& 14.39272678847431 \\
+p   & 3.6711810480483109E-007 & 3.6711810480483109E-007 & 3.6711810480483109E-007 \\
+\hline
+\end{tabular}
+
+\vspace{0.5cm}
+\footnotesize
+n= 100000000 \\
+
+\begin{tabular}{|c|c|c|c|}
+\hline  
+Calcul & CPU & CPU option fast & GPU \\
+\hline
+sum & 18.99789648\maincolor{299154} & 18.99789648\maincolor{681272} & 18.997896\maincolor{47946185} \\
+p   & 1.8830363046618004E-007 & 1.8448244887281362E-007 & 1.9183331545491455E-007  \\
+\hline
+\end{tabular}
+\end{frame}
+
+
+\subsection{Les bonnes pratiques}
+
+%%---------------------------------------------------------------
+\begin{frame}
+  \frametitle{Calcul scientifique : les bonnes pratiques}
+  
+\begin{itemize}
+\item Gestion des données : utilisation et production 
+  \item Gestion des codes : écriture, exécution et diffusion 
+  \end{itemize}
+\vspace{0.4cm}
+\center
+\mycolor{\ding{220} Pour chaque étape il y a des outils pour vous aider !}
+\end{frame}
+
+%%---------------------------------------------------------------
+\begin{frame}
+  \frametitle{Calcul scientifique : les bonnes pratiques}
+%  \framesubtitle{Gestion des données}
+
+  \begin{block}{Gestion des données d'entrée }
+Dans une publication, vous indiquerez : 
+  \begin{itemize}
+  \item DOI + lien téléchargement
+  \item Trace d'une conversion de format 
+  \item Trace du traitement effectué
+  \item La façon dont elles sont utilisées dans votre simulation 
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+%%---------------------------------------------------------------
+\begin{frame}
+  \frametitle{Calcul scientifique : les bonnes pratiques}
+%  \framesubtitle{Gestion des données}
+
+\begin{block}{Gestion des données de sortie : respect des principes FAIR }
+  \begin{itemize}
+  \item format standard
+  \item licence
+  \item DOI + entrepôt
+  \item Description 
+  \item Métadonnées 
+\end{itemize}
+\end{block}  
+\end{frame}
+
+
+%%---------------------------------------------------------------
+\begin{frame}
+  \frametitle{Calcul scientifique : les bonnes pratiques}
+  \framesubtitle{Ecriture et exécution du code}
+
+\begin{itemize}
+\item Mettre en \oe uvre les bonnes pratiques de développement
+\item Si possible, utiliser un \mycolor{gestionnaire d'environnement logiciel reproductible (Guix, Nix)}
+\item Réfléchir à une licence : va réglementer la vie du logiciel 
+\item Utiliser un \mycolor{Outil de versionnement} (forge logicielle)
+\item Rédiger une \mycolor{documentation du code} \\
+\end{itemize}
+
+\vspace{0.3cm}
+
+Penser à sauvegarder dans des fichiers adaptés : 
+\begin{itemize}
+\item Description des moyens de calcul (portable, cluster, ...)[README]
+\item \mycolor{Environnement logiciel}
+\item Jeux de paramètres 
+\item \mycolor{Workflow} d'éxécution
+\end{itemize}
+
+\end{frame}
+
+
+
+%%---------------------------------------------------------------
+\begin{frame}
+  \frametitle{Calcul scientifique : les bonnes pratiques}
+  \framesubtitle{Diffusion du code}
+
+  \begin{itemize}
+  \item Mettre une license (licence, contributeurs, etc ..)
+  \item Identifiant pérenne : HAL + SWH
+    \includegraphics[height=3cm]{./figures/Git_Swh_Hal_3.png}
+  \item Description de l'environnement logiciel 
+  \item Fichier de workflow 
+\end{itemize}
+
+\end{frame}
+
+
+
+\section{Conclusions}
+%% III Les leviers d'actions 
+%%---------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{Personne n'est parfait !}
+
+\begin{block}{Idée : changer ses pratiques en douceur \emoji{winking-face} }  
+
+\begin{itemize}
+  \item identifier les facteurs qui freinent l'accès à la reproductibilité
+    \begin{itemize}
+  \item[$\circ$] facteurs humains
+  \item[$\circ$] facteurs techniques
+  \item[$\circ$] facteurs structurels : incitation à la publication
+ \end{itemize}   
+ \item Identifier les points à améliorer 
+ \item Comment ? il existe des outils 
+\end{itemize}
+\end{block}
+%
+\end{frame}
+
+%%---------------------------------------------------------------
+\begin{frame}
+  \frametitle{Conclusions}
+\begin{block}{En pratique }
+\begin{itemize}
+\item On perd un peu de temps à la mise en place du protocole 
+\item On en gagne vraiment beaucoup \textit{a posteriori}
+\item Il existe pas mal d'outils qui aident vraiment 
+\end{itemize}
+\end{block}
+
+\begin{block}{Qui est gagnant ? }
+\begin{itemize}
+\item Vous : rigueur + gain de temps
+\item Les reviewers : confiance
+\item Vos collègues : facilite la transmission des codes, les collaborations  
+\item Le grand public : confiance
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+%%---------------------------------------------------------------
+\begin{frame}
+  \frametitle{Exercice}
+
+\begin{block}{Mise en pratique }
+\begin{itemize}
+\item par groupe de 4 ou 5 
+\item présentations
+\item identifier une bonne pratique que vous avez 
+\item réfléchissez à un élément que vous pourriez facilement améliorer
+\item discussion 
+\item un membre du groupe fait une restitution 
+\end{itemize}
+\end{block}
+\end{frame}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:
