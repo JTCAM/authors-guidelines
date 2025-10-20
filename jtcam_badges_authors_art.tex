@@ -1,25 +1,34 @@
 \title{Availability, reproducibility and reusability evaluation levels: guideline for authors}
 
-\section{Data management}
+\section{Introduction}
 
+What is the interest ?\\
+Adopting open science practices can enhance the quality, credibility, and reach of your research. Open science is a collaborative effort that welcomes everyone—regardless of role or experience—to participate in creating a more equitable and trustworthy research ecosystem (COS, Center for Open Science). 
+
+These principles aim to democratize access to research, promote equitable resource distribution, foster accountability and trustworthiness, accelerate self-correction, and improve rigor and reproducibility.
+
+Reproducibility—the ability of independent researchers to obtain the same (or similar) results when repeating an experiment or test—is one of the hallmarks of good science (Popper 1959). Reproducibility provides scientists with evidence that research results are objective and reliable and not due to bias or chance (Rooney et al 2016).
+
+Moreover, for a researcher, being able to reproduce his own work few months later allows to save a great amountdeal of time.
+
+\section{Data management}
 
 \section{Code management}
 We distinguished 3 different independent categories (some badges may be obtained independently):
 
 \begin{itemize}
-\item Availability: the software artefacts used in the publication adhere to the standard Open Science standard. Reader can find the code in an open repository
+\item Availability: the software artefacts used in the publication adhere to the Open Science standard. Reader can find the code in an open repository, with mandatory information such as authors and licence files. 
 \item Reproducibility: readers can reproduce the main results of the publication. The authors have provided all the necessary elements to enable this.
   
 \item Reusability: The software artefacts can be reused for goals or experiments other than those described in the article. The authors have provided readers with all the elements needed to modify the code, add new functionalities, and ensure cumulative science. 
 \end{itemize}
 
-For each of them, a finer granularity is defined to indicate what can be done to improve their work.
+In the following section, for each of them, a finer granularity is defined to indicate what can be done to get more badges.
 
 
 \subsection{Availability of the code}
 
-The code used in the publication has to be available for reviewers and readers. There are various level of availability of the code detailed in the following table:\\
-
+As described before, to respect the standard of open science, the code used in the publication has to be available for reviewers and readers. We details here the different levels of availability of the code:\\
 
 \begin{tabular}{|p{10cm}|p{1.5cm}|}
 %\begin{tabular}{|c|c|}
@@ -41,24 +50,24 @@ code available on a public forge + license, authors, contributors files, commit 
 More details :
 \begin{itemize}
 \item Level 1: \\
-without a licence file, the code cannot be used by other people. The files of the authors and contributors are needed for patrimonial and author's rights. Finally, providing the commit and the exact branch enables further modifications to be made to the repository without losing the state corresponding to the article.   
+without a licence file, the code cannot be used by other people. The files of the authors and contributors are needed for patrimonial and author's rights. Finally, providing the commit and the exact branch enables further modifications to be made in the repository by author, without losing the state corresponding to the article.   
 
 \item Level 2: \\
-Zenodo provides a DOI and enables to fix a precise state of the software
+Zenodo provides a DOI and enables to fix a precise state of the software.
   
 \item Level 3: \\
-Hosting your source code on the Software Heritage platform enables a perennial archive and a very precise commit identification (SWHID) 
+Hosting your source code on the Software Heritage platform enables a perennial archive and a very precise commit identification (SWHID) (for example, in the article, you can cite a specifi script with a specific identifier). 
 \item Level 4: \\
-  HAL deposit enables to verify that all the needed files are present and in the right format (curation)\\
+  HAL deposit enables to verify that all the needed files are present and in the right format (curation).\\
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Reproducibility}
 
-\begin{tabular}{|p{10cm}|p{1cm}|p{1.7cm}|}
+\begin{tabular}{|p{10cm}|p{1.6cm}|p{2.2cm}|}
 \hline
- \cellcolor{bl1} Description & \cellcolor{bl1} Stamp & \cellcolor{bl1} Requirement \\
+\cellcolor{bl1} Description & \cellcolor{bl1} Stamp & \cellcolor{bl1} Requirement \\
 \hline
 re-runable code, description of the workflow and test case(s) &  \textcolor{yell1}{\ding{115}} & \textcolor{green1}{\ding{78}}\\ 
 \hline
@@ -74,16 +83,16 @@ re-runable code, description of the workflow and test case(s) &  \textcolor{yell
 More details :
 \begin{itemize}
 \item Level 1: \\
-Supposing the code is available and usable, the reader can re-run understanding with component has to be used and in which order. He can also verify througgh a test that he obtains correct results.    
+Supposing the code is available, the reader can re-run it understanding which component has to be used and in which order. He can also verify through a test that he obtains correct results.    
 
 \item Level 2: \\
 A workflow manager solution is provided: the reader has just to launch the procedure in order to run a test case.
   
 \item Level 3: \\
-The software environement is described: the reader can deploy it in his own computer autoatically or at leat manually with the correct version number of the dependances
+The software environement is described: the reader can deploy it in his own computer (automatically or at leat manually) with the correct version number of dependances.
 
 \item Level 4: \\
-The repository contains regression tests, test cases and automatic documentation in a CI: any modification is tested and does not modify the behaviour of the code. Moreover, new documentation is automatically generated.   
+The repository contains regression tests, test cases and automatic documentation in a CI: any modification is tested and does not modify the former behaviour of the code in specific configurations. Moreover, a new documentation is automatically generated.   
 \end{itemize}
 
 
@@ -93,14 +102,18 @@ The repository contains regression tests, test cases and automatic documentation
 \subsection{Reusability for further projects}
 
 
-\begin{tabular}{|p{10cm}|p{1cm}|p{1.7cm}|}
+\begin{tabular}{|p{12cm}|p{1.6cm}|p{2.2cm}|}
 \hline
+\hline 
 \cellcolor{bl1} Description & \cellcolor{bl1} Stamp & \cellcolor{bl1} Requirement \\
 \hline
 All functions documentation inside the code & \textcolor{purple1}{\ding{112}} &  \textcolor{yell1}{\ding{115}} \\
-+ Description of each element in a Readme + workflow description for execution &  \textcolor{purple1}{\ding{112}\ding{112}} &\\
-+ User documentation with examples &  \textcolor{purple1}{\ding{112}\ding{112}\ding{112}}&\\
-+ Developper documentation (``How to contribute ?'' guide) &  \textcolor{purple1}{\ding{112}\ding{112}\ding{112}\ding{112}}&\\
+\hline
++ Description of each element in a Readme + workflow description for execution &  \textcolor{purple1}{\ding{112}\ding{112}} & \textcolor{yell1}{\ding{115}} \\
+\hline
++ User documentation with examples &  \textcolor{purple1}{\ding{112}\ding{112}\ding{112}}&\textcolor{yell1}{\ding{115}} \\
+\hline
++ Developper documentation (``How to contribute ?'' guide) &  \textcolor{purple1}{\ding{112}\ding{112}\ding{112}\ding{112}}&\textcolor{yell1}{\ding{115}} \\
 \hline
 \end{tabular}
 ~\\
@@ -115,7 +128,7 @@ The role of each piece of code or script is documented in a Readme file. Each st
 \item Level 3: \\
 The ``user'' documentation is complete with simple test cases, examples, links with bibliography and theoretical elements. Numerical methods are described, as is the rationale behind their selection.   
 \item Level 4: \\
-The repository contains a guide for future developper, explaining the choices made during the software development and the way to modify it. 
+The repository contains a guide for future developpers, explaining the choices made during the software development and the way to modify it. 
 \end{itemize}
 
 
