@@ -15,7 +15,7 @@ and somme bibliography references
 
 ## Authors
 - JTCAM board
-- Celine Acary-Robert, representing the French Reproducible Network and the software environement working group 
+- Céline Acary-Robert, representing the French Reproducible Network and the software environement working group 
 
 ## Licence
 CC-BY
