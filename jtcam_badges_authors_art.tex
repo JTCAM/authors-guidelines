@@ -12,7 +12,7 @@ These principles aim to democratize access to research, promote equitable resour
 
 Reproducibility—the ability of independent researchers to obtain the same (or similar) results when repeating an experiment or test—is one of the hallmarks of good science (Popper 1959). Reproducibility provides scientists with evidence that research results are objective and reliable and not due to bias or chance (Rooney et al 2016).
 
-Moreover, for a researcher, being able to reproduce his own work few months later allows to save a great amountdeal of time.
+Moreover, for a researcher, being able to reproduce his own work few months later allows to save a great amount of time.
 
 \subsection{Increasing of the number of citations ?}
 An international research team from PLOS Open Research Solutions has conducted a comprehensive study covering an entire country and all disciplines. The authors, Giovanni Colavizza (Denmark), Lauren Cadwallader (United States) and Iain Hrynaszkiewicz (United States), chose to study France, a leading country in monitoring Open Science, and to use data from the French Open Science Monitor, that covers the entire country since 2018.
@@ -23,10 +23,11 @@ An other source (\url{https://www.replicabilitystamp.org/}) also stats that pape
 \section{Data management}
 
 \section{Code management}
-We distinguished 3 different independent categories (some badges may be obtained independently):
+We distinguish 3 different independent categories (some badges may be obtained independently):
 
 \begin{itemize}
 \item Availability: the software artefacts used in the publication adhere to the Open Science standard. Reader can find the code in an open repository, with mandatory information such as authors and licence files. 
+
 \item Reproducibility: readers can reproduce the main results of the publication. The authors have provided all the necessary elements to enable this.
   
 \item Reusability: The software artefacts can be reused for goals or experiments other than those described in the article. The authors have provided readers with all the elements needed to modify the code, add new functionalities, and ensure cumulative science. 
@@ -84,7 +85,7 @@ re-runable code, description of the workflow and test case(s) &  \textcolor{yell
 \hline
 + reproducible software environment & \textcolor{yell1}{\ding{115}\ding{115}\ding{115}} & \textcolor{green1}{\ding{78}} \\
 \hline
-+ regression, test cases and documentation in CI & \textcolor{yell1}{\ding{115}\ding{115}\ding{115}\ding{115}} &  \textcolor{green1}{\ding{78}} \\
++ regression, test cases and documentation (in CI ?) & \textcolor{yell1}{\ding{115}\ding{115}\ding{115}\ding{115}} &  \textcolor{green1}{\ding{78}} \\
  \hline
 \end{tabular}
 ~\\
@@ -92,16 +93,16 @@ re-runable code, description of the workflow and test case(s) &  \textcolor{yell
 More details :
 \begin{itemize}
 \item Level 1: \\
-Supposing the code is available, the reader can re-run it understanding which component has to be used and in which order. He can also verify through a test that he obtains correct results.    
+Supposing the code is available, the reader can re-run it understanding which component has to be used and in which order. She/he can also verify through a test that he obtains correct results.    
 
 \item Level 2: \\
-A workflow manager solution is provided: the reader has just to launch the procedure in order to run a test case.
+A workflow manager solution is provided: the reader has just to launch the procedure in order to run a test case. As workflow manager tool, we could cite snakemake and nextflow for example. 
   
 \item Level 3: \\
-The software environement is described: the reader can deploy it in his own computer (automatically or at leat manually) with the correct version number of dependances.
+The software environement is entirely described: the reader can deploy it in his own computer (automatically or at leat manually) with the correct version number of dependances. \textcolor{red}{Various tools simplify this step such as nix/guix, cmake for compilation, etc.}
 
 \item Level 4: \\
-The repository contains regression tests, test cases and automatic documentation in a CI: any modification is tested and does not modify the former behaviour of the code in specific configurations. Moreover, a new documentation is automatically generated.   
+The repository contains regression tests, test cases and automatic documentation \textcolor{red}{in a CI}: any modification is tested and does not modify the former behaviour of the code in specific configurations. Moreover, a new documentation is automatically generated.   
 \end{itemize}
 
 
