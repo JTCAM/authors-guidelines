@@ -10,3 +10,6 @@ tmp/
 *.snm
 *.toc
 .auctex-auto
+
+*_files
+jtcam_badges_authors.html

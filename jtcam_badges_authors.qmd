@@ -223,7 +223,7 @@ text
 :::
 
 ::: {.callout-tip collapse="true"}
-# Open-source License
+# Open-science creative common License
 
 The License must be clearly indicated in the root of the repository (**LICENSE/COPYING**).
 Exemple of valid licenses:
@@ -254,7 +254,7 @@ The authors and contributors should be given with one or several of the followin
 ::: {.callout-tip collapse="true"}
 # RO-crate and metadata extraction
 
-- metadata extracted from file scanning
+- metadata extracted from file scanning (Solidipes, other examples, ...)
 - RO-crate format for storage of metadata
 :::
 
@@ -277,58 +277,82 @@ The authors and contributors should be given with one or several of the followin
 ::: {.callout-tip collapse="true"}
 # re-runable code
 
-text
+It is possible to re-generate the dataset
+
+- With guidance in documentation 
+- With a script (reproduce.sh, reproduce.py, ...) 
 :::
 
-::: {.callout-tip collapse="true"}
-# description of the workflow
-
-text
-:::
-
-::: {.callout-tip collapse="true"}
-# description of the workflow
-
-test case(s)
-:::
 
 ### ↺↺ Level 2
 
 ::: {.callout-tip collapse="true"}
-# workflow manager for automatic execution
+# Reproducible software environment
 
-text
+Dependency Specification Methods may be:
+
+- `requirements.txt` — standard pip list of packages. [Docs](https://pip.pypa.io/en/stable/cli/pip_install/#requirements-file-format)  
+- `setup.py` — classic Python package metadata + dependencies, used with setuptools. [Docs](https://setuptools.pypa.io/en/latest/userguide/declarative_config.html)  
+- `setup.cfg` — declarative alternative to `setup.py` for setuptools. [Docs](https://setuptools.pypa.io/en/latest/userguide/declarative_config.html)  
+- `pyproject.toml` — modern build system and dependencies (PEP 518/621), used by Poetry, Flit, etc. [Docs](https://www.python.org/dev/peps/pep-0518/)  
+- `environment.yml` — Conda environment specification for Python + packages. [Docs](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-yml-file)  
+- `renv.lock` / renv — environment and lockfile [Docs](https://rstudio.github.io/renv/articles/renv.html) 
+- `package.json` — main metadata + dependencies [Docs](https://docs.npmjs.com/cli/v9/configuring-npm/package-json)  
+- `package-lock.json` — exact versions lockfile [Docs](https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json)  
+- `yarn.lock` — Yarn lockfile [Docs](https://classic.yarnpkg.com/lang/en/docs/yarn-lock/)
+
 :::
 
 ### ↺↺↺ Level 3
 
-::: {.callout-tip collapse="true"}
-# reproducible software environment
 
-text
+::: {.callout-tip collapse="true"}
+# workflow manager for automatic execution
+
+Usage of a workflow manager for dependency tree representation and management
+
+- General workflow managers
+  - **[GNU Make](https://www.gnu.org/software/make/)** — Classic rule-based build automation; tracks dependencies; simple, reproducible task execution. 
+  - **[Snakemake](https://snakemake.github.io/)** — Rule-based, scalable, reproducible pipelines.  
+  - **[Nextflow](https://www.nextflow.io/)** — Data-driven workflows, cloud & HPC support.  
+  - **[Luigi](https://luigi.readthedocs.io/)** — Python task dependency management, batch pipelines.  
+  - **[Airflow](https://airflow.apache.org/)** — DAG-based orchestration, scheduling, monitoring.
+  - **[BlackDynamite](https://gitlab.com/blackdynamite/blackdynamite)** — Automates parametric studies, runs executables with varying parameters, collects and organizes results.
+
+
+- AI / ML oriented workflow managers
+  - **[MLflow](https://mlflow.org/)** — Experiment tracking, model registry, reproducible ML pipelines.  
+  - **[Kubeflow](https://www.kubeflow.org/)** — Kubernetes-native ML workflows and model deployment.  
+  - **[Metaflow](https://metaflow.org/)** — Human-centric ML pipelines, versioned and reproducible.  
+  - **[Weights & Biases (W&B)](https://wandb.ai/)** — Experiment tracking and pipeline monitoring.
+
+- Other / Specialized workflow managers
+  - **[Galaxy](https://galaxyproject.org/)** — Accessible bioinformatics workflow platform.  
+  - **[Nextflow Tower](https://tower.nf/)** — Cloud & cluster monitoring interface for Nextflow.  
+  - **[Argo Workflows](https://argoproj.github.io/argo-workflows/)** — Kubernetes-native DAG orchestration.  
+  - **[Prefect](https://www.prefect.io/)** — Modern Python workflow orchestration with retrying and scheduling.
+
 :::
+
+
 
 ### ↺↺↺↺ Level 4
 
 ::: {.callout-tip collapse="true"}
-# regression-tests
+# Reproducibility test
 
-text
+- Provide routines verifying that re-running workflow reproduces the results
+- For costly calculations, may process a subset of the data
+- ???
+
 :::
-
-::: {.callout-tip collapse="true"}
-# documentation in CI
-
-text
-:::
-
 
 ## <i class="fa fa-recycle"></i> Re-usable
 
 ### <i class="fa fa-recycle"></i> Level 1
 
 ::: {.callout-tip collapse="true"}
-# All functions documentated inside the code
+# criterion 1
 
 text
 :::
@@ -336,7 +360,7 @@ text
 ### <i class="fa fa-recycle"></i> <i class="fa fa-recycle"></i> Level 2
 
 ::: {.callout-tip collapse="true"}
-# Description of each element in a Readme + workflow description for execution
+# Criterion 2
 
 text
 :::
@@ -344,15 +368,7 @@ text
 ### <i class="fa fa-recycle"></i><i class="fa fa-recycle"></i><i class="fa fa-recycle"></i> Level 3
 
 ::: {.callout-tip collapse="true"}
-# User documentation with examples
-
-text
-:::
-
-### <i class="fa fa-recycle"></i><i class="fa fa-recycle"></i><i class="fa fa-recycle"></i><i class="fa fa-recycle"></i> Level 4
-
-::: {.callout-tip collapse="true"}
-# Developer documentation ("How to contribute?" guide)
+# Criterion 3
 
 text
 :::
