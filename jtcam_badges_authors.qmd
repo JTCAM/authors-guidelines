@@ -275,7 +275,7 @@ The authors and contributors should be given with one or several of the followin
 ### ↺ Level 1
 
 ::: {.callout-tip collapse="true"}
-# re-runable code
+# Reproducible data
 
 It is possible to re-generate the dataset
 
@@ -307,7 +307,7 @@ Dependency Specification Methods may be:
 
 
 ::: {.callout-tip collapse="true"}
-# workflow manager for automatic execution
+# Workflow manager for automatic reproduction of data
 
 Usage of a workflow manager for dependency tree representation and management
 
@@ -343,7 +343,7 @@ Usage of a workflow manager for dependency tree representation and management
 
 - Provide routines verifying that re-running workflow reproduces the results
 - For costly calculations, may process a subset of the data
-- ???
+- what else ???
 
 :::
 

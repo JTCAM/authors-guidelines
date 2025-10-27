@@ -13,3 +13,6 @@ tmp/
 
 *_files
 jtcam_badges_authors.html
+
+/.quarto/
+_site
