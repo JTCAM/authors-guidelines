@@ -1,0 +1,4 @@
+- source: jtcam_badges_authors.qmd
+  quarto-pub:
+    - id: ddbdc228-0dbf-485a-ae30-afe66b49312e
+      url: https://ganciaux.quarto.pub/fair-reproducibility-guidelines
