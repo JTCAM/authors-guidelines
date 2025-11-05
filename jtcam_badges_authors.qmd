@@ -23,24 +23,23 @@ format:
 
 The source code can be found on a `git` force host `git`repositories. For instance:
 
-- **[GitHub](https://github.com)** — Widely used; strong integration tools; limited openness (proprietary).  
-- **[GitLab](https://gitlab.com)** — Open-core; self-host or cloud; good CI/CD; FAIR-aligned transparency.  
-- **[Codeberg](https://codeberg.org)** — Fully open-source (Gitea-based); privacy-friendly; EU-hosted.  
-- **[SourceHut](https://sr.ht)** — Minimalist; open protocols; plain-text workflows; fully libre.  
-- **[Bitbucket](https://bitbucket.org)** — Proprietary; integrates with Atlassian suite; less open.  
-- **[Gitea](https://gitea.io)** — Lightweight, self-hosted, MIT-licensed; supports FAIR openness.  
+- **[GitLab](https://gitlab.com)** — Open-core; self-host or cloud; good CI/CD; FAIR-aligned transparency.
+- **[Codeberg](https://codeberg.org)** — Fully open-source (Gitea-based); privacy-friendly; EU-hosted.
+- **[SourceHut](https://sr.ht)** — Minimalist; open protocols; plain-text workflows; fully libre.
+- **[Bitbucket](https://bitbucket.org)** — Proprietary; integrates with Atlassian suite; less open.
+- **[Gitea](https://gitea.io)** — Lightweight, self-hosted, MIT-licensed; supports FAIR openness.
 - **[Forgejo](https://forgejo.org)** — Gitea fork; community-driven; strong open governance.
-- **[GRICAD GitLab](https://gricad-gitlab.univ-grenoble-alpes.fr/)** — Academic research-forge (Université Grenoble Alpes + CNRS + INRIA); local GitLab instance for research software. :contentReference[oaicite:0]{index=0}  
-- **[IRD Forge](https://forge.ird.fr/)** — Institutional GitLab-based forge by Institut de recherche pour le développement (IRD); supports versioning, CI/CD, public/private code. :contentReference[oaicite:2]{index=2}  
-- **[Forgejo / Fordj (France-specific interest)](https://code.gouv.fr/fr/bluehats/autres-forges/)** — Libre community-forge (via DINUM / BlueHats) for French public sector; open-source development. :contentReference[oaicite:4]{index=4}  
-
+- **[GRICAD GitLab](https://gricad-gitlab.univ-grenoble-alpes.fr/)** — Academic research-forge (Université Grenoble Alpes + CNRS + INRIA); local GitLab instance for research software. :contentReference[oaicite:0]{index=0}
+- **[IRD Forge](https://forge.ird.fr/)** — Institutional GitLab-based forge by Institut de recherche pour le développement (IRD); supports versioning, CI/CD, public/private code. :contentReference[oaicite:2]{index=2}
+- **[Forgejo / Fordj (France-specific interest)](https://code.gouv.fr/fr/bluehats/autres-forges/)** — Libre community-forge (via DINUM / BlueHats) for French public sector; open-source development. :contentReference[oaicite:4]{index=4}
+- **[GitHub](https://github.com)** — Widely used; strong integration tools; limited openness (proprietary).
 :::
 
 ::: {.callout-tip collapse="true"}
 # Software commit/branch used for publication results
 
 - Within the README file: Doe, J., & Smith, A. (2025). *CoolSim: Climate simulation toolkit* (Version 2.3.1) [Computer software]. GitHub. Commit: 4f8a9d2. https://github.com/exampleuser/coolsim/tree/4f8a9d2
-- Within the paper references: 
+- Within the paper references:
 ```bib
 @software{Doe_CoolSim_2025,
   author       = {Doe, John and Smith, Alice},
@@ -60,11 +59,12 @@ The source code can be found on a `git` force host `git`repositories. For instan
 The License must be clearly indicated in the root of the repository (**LICENSE/COPYING**).
 Exemple of valid licenses:
 
-- **[MIT License](https://opensource.org/licenses/MIT)** — Permissive; free reuse, modify, distribute; attribution only.  
-- **[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)** — Permissive; attribution + patent grant; high interoperability.  
-- **[BSD 3-Clause](https://opensource.org/licenses/BSD-3-Clause)** — Permissive; attribution + non-endorsement.  
-- **[GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html)** — Copyleft; derivatives must remain open.  
-- **[MPL-2.0](https://www.mozilla.org/en-US/MPL/2.0/)** — Weak copyleft; file-level openness; flexible reuse.  
+- **[MIT License](https://opensource.org/licenses/MIT)** — Permissive; free reuse, modify, distribute; attribution only.
+- **[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)** — Permissive; attribution + patent grant; high interoperability.
+- **[BSD 3-Clause](https://opensource.org/licenses/BSD-3-Clause)** — Permissive; attribution + non-endorsement.
+- **[GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)** — Copyleft; derivatives must remain open.
+- **[LGPL-3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html)** — Copyleft; Lesser GPL permits use of the library in proprietary programs.
+- **[MPL-2.0](https://www.mozilla.org/en-US/MPL/2.0/)** — Weak copyleft; file-level openness; flexible reuse.
 - **[CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)** — Attribution; for data/docs; FAIR-compliant openness.
 
 :::
@@ -74,10 +74,10 @@ Exemple of valid licenses:
 
 The authors and contributors should be given with one or several of the following:
 
-- **`AUTHORS` file** — Plain text or Markdown file listing main authors and maintainers.  
+- **`AUTHORS` file** — Plain text or Markdown file listing main authors and maintainers.
   Example: `AUTHORS`, `AUTHORS.md`
 
-- **`CONTRIBUTORS` file** — Lists additional contributors or institutional credits.  
+- **`CONTRIBUTORS` file** — Lists additional contributors or institutional credits.
   Example: `CONTRIBUTORS`, `CONTRIBUTORS.md`
 
 - Within **`README` file** — Optional “Authors” or “Credits” section; human-readable summary.
@@ -93,19 +93,23 @@ The authors and contributors should be given with one or several of the followin
 # Code archived on Zenodo
 
 - **Code archived on Zenodo** - Repository release exported to Zenodo for citation and FAIR compliance. Long-term preservation and DOI assignment.
-- Can be done via [GitHub–Zenodo integration](https://guides.github.com/activities/citable-code/). 
+- Can be done via [GitHub–Zenodo integration](https://guides.github.com/activities/citable-code/).
 
 :::
 
 ### 🌐🌐🌐 Level 3
 
 ::: {.callout-tip collapse="true"}
-# Software Heritage Identifier (SWHID) 
+# Software Heritage Identifier (SWHID)
 
 - **Code archived on Software Heritage** — Ensures permanent, tamper-proof preservation of source code. Every commit is archived and globally accessible.
 - Very easy and reliable.
 - Provide a SWHID permanent id.
+- Can identify only part of a code
+- See [the "Save code now" procedure](https://archive.softwareheritage.org/save/) to proceed from different origins (git, tar, svn, ...)
+<!--
 - See [Software Heritage: Archiving GitHub repositories](https://docs.softwareheritage.org/devel/swh-model/platforms.html#github) for instructions on submitting repositories.
+-->
 :::
 
 
@@ -143,7 +147,7 @@ text
 test case(s)
 :::
 
-### ↺↺ Level 2
+### <span style="color:red"> ↺</span>↺ Level 2
 
 ::: {.callout-tip collapse="true"}
 # workflow manager for automatic execution
@@ -237,10 +241,10 @@ Exemple of valid licenses:
 
 The authors and contributors should be given with one or several of the following:
 
-- **`AUTHORS` file** — Plain text or Markdown file listing main authors and maintainers.  
+- **`AUTHORS` file** — Plain text or Markdown file listing main authors and maintainers.
   Example: `AUTHORS`, `AUTHORS.md`
 
-- **`CONTRIBUTORS` file** — Lists additional contributors or institutional credits.  
+- **`CONTRIBUTORS` file** — Lists additional contributors or institutional credits.
   Example: `CONTRIBUTORS`, `CONTRIBUTORS.md`
 
 - Within **`README` file** — Optional “Authors” or “Credits” section; human-readable summary.
@@ -279,8 +283,8 @@ The authors and contributors should be given with one or several of the followin
 
 It is possible to re-generate the dataset
 
-- With guidance in documentation 
-- With a script (reproduce.sh, reproduce.py, ...) 
+- With guidance in documentation
+- With a script (reproduce.sh, reproduce.py, ...)
 :::
 
 
@@ -291,14 +295,14 @@ It is possible to re-generate the dataset
 
 Dependency Specification Methods may be:
 
-- `requirements.txt` — standard pip list of packages. [Docs](https://pip.pypa.io/en/stable/cli/pip_install/#requirements-file-format)  
-- `setup.py` — classic Python package metadata + dependencies, used with setuptools. [Docs](https://setuptools.pypa.io/en/latest/userguide/declarative_config.html)  
-- `setup.cfg` — declarative alternative to `setup.py` for setuptools. [Docs](https://setuptools.pypa.io/en/latest/userguide/declarative_config.html)  
-- `pyproject.toml` — modern build system and dependencies (PEP 518/621), used by Poetry, Flit, etc. [Docs](https://www.python.org/dev/peps/pep-0518/)  
-- `environment.yml` — Conda environment specification for Python + packages. [Docs](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-yml-file)  
-- `renv.lock` / renv — environment and lockfile [Docs](https://rstudio.github.io/renv/articles/renv.html) 
-- `package.json` — main metadata + dependencies [Docs](https://docs.npmjs.com/cli/v9/configuring-npm/package-json)  
-- `package-lock.json` — exact versions lockfile [Docs](https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json)  
+- `requirements.txt` — standard pip list of packages. [Docs](https://pip.pypa.io/en/stable/cli/pip_install/#requirements-file-format)
+- `setup.py` — classic Python package metadata + dependencies, used with setuptools. [Docs](https://setuptools.pypa.io/en/latest/userguide/declarative_config.html)
+- `setup.cfg` — declarative alternative to `setup.py` for setuptools. [Docs](https://setuptools.pypa.io/en/latest/userguide/declarative_config.html)
+- `pyproject.toml` — modern build system and dependencies (PEP 518/621), used by Poetry, Flit, etc. [Docs](https://www.python.org/dev/peps/pep-0518/)
+- `environment.yml` — Conda environment specification for Python + packages. [Docs](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-yml-file)
+- `renv.lock` / renv — environment and lockfile [Docs](https://rstudio.github.io/renv/articles/renv.html)
+- `package.json` — main metadata + dependencies [Docs](https://docs.npmjs.com/cli/v9/configuring-npm/package-json)
+- `package-lock.json` — exact versions lockfile [Docs](https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json)
 - `yarn.lock` — Yarn lockfile [Docs](https://classic.yarnpkg.com/lang/en/docs/yarn-lock/)
 
 :::
@@ -312,24 +316,24 @@ Dependency Specification Methods may be:
 Usage of a workflow manager for dependency tree representation and management
 
 - General workflow managers
-  - **[GNU Make](https://www.gnu.org/software/make/)** — Classic rule-based build automation; tracks dependencies; simple, reproducible task execution. 
-  - **[Snakemake](https://snakemake.github.io/)** — Rule-based, scalable, reproducible pipelines.  
-  - **[Nextflow](https://www.nextflow.io/)** — Data-driven workflows, cloud & HPC support.  
-  - **[Luigi](https://luigi.readthedocs.io/)** — Python task dependency management, batch pipelines.  
+  - **[GNU Make](https://www.gnu.org/software/make/)** — Classic rule-based build automation; tracks dependencies; simple, reproducible task execution.
+  - **[Snakemake](https://snakemake.github.io/)** — Rule-based, scalable, reproducible pipelines.
+  - **[Nextflow](https://www.nextflow.io/)** — Data-driven workflows, cloud & HPC support.
+  - **[Luigi](https://luigi.readthedocs.io/)** — Python task dependency management, batch pipelines.
   - **[Airflow](https://airflow.apache.org/)** — DAG-based orchestration, scheduling, monitoring.
   - **[BlackDynamite](https://gitlab.com/blackdynamite/blackdynamite)** — Automates parametric studies, runs executables with varying parameters, collects and organizes results.
 
 
 - AI / ML oriented workflow managers
-  - **[MLflow](https://mlflow.org/)** — Experiment tracking, model registry, reproducible ML pipelines.  
-  - **[Kubeflow](https://www.kubeflow.org/)** — Kubernetes-native ML workflows and model deployment.  
-  - **[Metaflow](https://metaflow.org/)** — Human-centric ML pipelines, versioned and reproducible.  
+  - **[MLflow](https://mlflow.org/)** — Experiment tracking, model registry, reproducible ML pipelines.
+  - **[Kubeflow](https://www.kubeflow.org/)** — Kubernetes-native ML workflows and model deployment.
+  - **[Metaflow](https://metaflow.org/)** — Human-centric ML pipelines, versioned and reproducible.
   - **[Weights & Biases (W&B)](https://wandb.ai/)** — Experiment tracking and pipeline monitoring.
 
 - Other / Specialized workflow managers
-  - **[Galaxy](https://galaxyproject.org/)** — Accessible bioinformatics workflow platform.  
-  - **[Nextflow Tower](https://tower.nf/)** — Cloud & cluster monitoring interface for Nextflow.  
-  - **[Argo Workflows](https://argoproj.github.io/argo-workflows/)** — Kubernetes-native DAG orchestration.  
+  - **[Galaxy](https://galaxyproject.org/)** — Accessible bioinformatics workflow platform.
+  - **[Nextflow Tower](https://tower.nf/)** — Cloud & cluster monitoring interface for Nextflow.
+  - **[Argo Workflows](https://argoproj.github.io/argo-workflows/)** — Kubernetes-native DAG orchestration.
   - **[Prefect](https://www.prefect.io/)** — Modern Python workflow orchestration with retrying and scheduling.
 
 :::
@@ -378,7 +382,7 @@ text
 
 ## ACM badges 1/2
 
-One badge by element. Can be attributed independently and cumulated.  
+One badge by element. Can be attributed independently and cumulated.
 *"artifact" = digital object created by the authors to be used as part of the study or generated by the experiment itself.*
 
 | Badge                                                        | Validated elements                                                                                |
