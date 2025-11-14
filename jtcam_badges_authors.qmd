@@ -249,16 +249,7 @@ The authors and contributors should be given with one or several of the followin
 
 :::
 
-### 🌐🌐🌐 Level 2
-
-::: {.callout-tip collapse="true"}
-# RO-crate and metadata extraction
-
-- metadata extracted from file scanning (Solidipes, other examples, ...)
-- RO-crate format for storage of metadata
-:::
-
-### 🌐🌐 Level 3
+### 🌐🌐 Level 2
 
 ::: {.callout-tip collapse="true"}
 # Clean dataset
@@ -266,9 +257,28 @@ The authors and contributors should be given with one or several of the followin
 - README file: dataset description
 - Understandable directory structure (not too deep)
 - No irrelevent files (empty, temporary)
+:::
+
+### 🌐🌐🌐 Level 3
+
+::: {.callout-tip collapse="true"}
+# RO-crate and metadata extraction
+
+- metadata extracted from file scanning (Solidipes, other examples, ...)
+- Open file formats
+- RO-crate format for storage of metadata
+:::
+
+### 🌐🌐🌐 Level 4
+
+::: {.callout-tip collapse="true"}
+# Curated dataset
+
 - Reasonable compression level
 - Long-term preservation file formats
+- Community based validation
 :::
+
 
 ## ↺ Reproducibility
 
@@ -277,10 +287,23 @@ The authors and contributors should be given with one or several of the followin
 ::: {.callout-tip collapse="true"}
 # Reproducible data
 
-It is possible to re-generate the dataset
+It is possible to re-generate the dataset:
 
 - With guidance in documentation 
 - With a script (reproduce.sh, reproduce.py, ...) 
+
+*Only very limited human efforts should be made to reproduce*
+
+
+::: {.callout-tip collapse="true"}
+# List of dependencies
+- `requirements.txt` — standard pip list of packages. [Docs](https://pip.pypa.io/en/stable/cli/pip_install/#requirements-file-format)  
+- `setup.py` — classic Python package metadata + dependencies, used with setuptools. [Docs](https://setuptools.pypa.io/en/latest/userguide/declarative_config.html)  
+- `setup.cfg` — declarative alternative to `setup.py` for setuptools. [Docs](https://setuptools.pypa.io/en/latest/userguide/declarative_config.html)  
+- `pyproject.toml` — modern build system and dependencies (PEP 518/621), used by Poetry, Flit, etc. [Docs](https://www.python.org/dev/peps/pep-0518/)  
+- `environment.yml` — Conda environment specification for Python + packages. [Docs](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-yml-file)  
+- `package.json` — main metadata + dependencies [Docs](https://docs.npmjs.com/cli/v9/configuring-npm/package-json)  
+
 :::
 
 
@@ -289,7 +312,7 @@ It is possible to re-generate the dataset
 ::: {.callout-tip collapse="true"}
 # Reproducible software environment
 
-Dependency Specification Methods may be:
+Reliable dependency descriptions are provided. i.e. exact version are findable in:
 
 - `requirements.txt` — standard pip list of packages. [Docs](https://pip.pypa.io/en/stable/cli/pip_install/#requirements-file-format)  
 - `setup.py` — classic Python package metadata + dependencies, used with setuptools. [Docs](https://setuptools.pypa.io/en/latest/userguide/declarative_config.html)  
@@ -300,6 +323,8 @@ Dependency Specification Methods may be:
 - `package.json` — main metadata + dependencies [Docs](https://docs.npmjs.com/cli/v9/configuring-npm/package-json)  
 - `package-lock.json` — exact versions lockfile [Docs](https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json)  
 - `yarn.lock` — Yarn lockfile [Docs](https://classic.yarnpkg.com/lang/en/docs/yarn-lock/)
+- Debian packages
+- List of NIX/spack packages
 
 :::
 
@@ -343,7 +368,6 @@ Usage of a workflow manager for dependency tree representation and management
 
 - Provide routines verifying that re-running workflow reproduces the results
 - For costly calculations, may process a subset of the data
-- what else ???
 
 :::
 
@@ -352,25 +376,40 @@ Usage of a workflow manager for dependency tree representation and management
 ### <i class="fa fa-recycle"></i> Level 1
 
 ::: {.callout-tip collapse="true"}
-# criterion 1
+# Open license
 
-text
+- list of open licenses for datasets allowing re-use
+- open file formats
 :::
 
 ### <i class="fa fa-recycle"></i> <i class="fa fa-recycle"></i> Level 2
 
 ::: {.callout-tip collapse="true"}
-# Criterion 2
+# Re-loadable data
 
-text
+- Formats respecting standards
+- Machine loadable
 :::
 
 ### <i class="fa fa-recycle"></i><i class="fa fa-recycle"></i><i class="fa fa-recycle"></i> Level 3
 
 ::: {.callout-tip collapse="true"}
-# Criterion 3
+# Documentation
 
-text
+- Understandable directory structure
+- Sensible file names
+- Description of files/data
+- Units following name standards
+:::
+
+### <i class="fa fa-recycle"></i><i class="fa fa-recycle"></i><i class="fa fa-recycle"></i><i class="fa fa-recycle"></i> Level 4
+
+::: {.callout-tip collapse="true"}
+# Re-use specific documentation
+
+- Instructions to modify models/codes
+- Templates for re-use
+- Instructions to publish produced extensions
 :::
 
 
