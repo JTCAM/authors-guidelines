@@ -125,9 +125,9 @@ The authors and contributors should be given with one or several of the followin
 :::
 
 
-## ↺ Reproducibility
+## <span style="color:red"> ↺</span> Reproducibility
 
-### ↺ Level 1
+### <span style="color:red"> ↺</span> Level 1
 
 ::: {.callout-tip collapse="true"}
 # Re-runable code
@@ -146,7 +146,7 @@ The authors and contributors should be given with one or several of the followin
 - The repository contains a test case to insure that the software provides correct results
 :::
 
-### <span style="color:red"> ↺</span>↺ Level 2
+### <span style="color:red"> ↺↺</span> Level 2
 
 ::: {.callout-tip collapse="true"}
 # Workflow manager for automatic execution
@@ -158,7 +158,7 @@ Some examples:
 - [CWL](https://www.commonwl.org/user_guide/index.html)
 :::
 
-### ↺↺↺ Level 3
+### <span style="color:red"> ↺↺↺</span> Level 3
 
 ::: {.callout-tip collapse="true"}
 # Reproducible software environment
@@ -170,7 +170,7 @@ The code comes with some files describing the complete software environement e.g
 This can be achieved through files like Makefiles, manifest.scm, renv (R), venv (Python)
 :::
 
-### ↺↺↺↺ Level 4
+### <span style="color:red"> ↺↺↺↺</span> Level 4
 
 ::: {.callout-tip collapse="true"}
 # Non-regression tests
@@ -287,9 +287,9 @@ The authors and contributors should be given with one or several of the followin
 :::
 
 
-## ↺ Reproducibility
+## <span style="color:red"> ↺</span> Reproducibility
 
-### ↺ Level 1
+### <span style="color:red"> ↺</span> Level 1
 
 ::: {.callout-tip collapse="true"}
 # Reproducible data
@@ -300,6 +300,7 @@ It is possible to re-generate the dataset:
 - With a script (reproduce.sh, reproduce.py, ...) 
 
 *Only very limited human efforts should be made to reproduce*
+:::
 
 
 ::: {.callout-tip collapse="true"}
@@ -314,7 +315,8 @@ It is possible to re-generate the dataset:
 :::
 
 
-### ↺↺ Level 2
+### <span style="color:red"> ↺↺</span> Level 2
+
 
 ::: {.callout-tip collapse="true"}
 # Reproducible software environment
@@ -335,8 +337,7 @@ Reliable dependency descriptions are provided. i.e. exact version are findable i
 
 :::
 
-### ↺↺↺ Level 3
-
+### <span style="color:red"> ↺↺↺</span> Level 3
 
 ::: {.callout-tip collapse="true"}
 # Workflow manager for automatic reproduction of data
@@ -367,8 +368,7 @@ Usage of a workflow manager for dependency tree representation and management
 :::
 
 
-
-### ↺↺↺↺ Level 4
+### <span style="color:red"> ↺↺↺↺</span> Level 4
 
 ::: {.callout-tip collapse="true"}
 # Reproducibility test
