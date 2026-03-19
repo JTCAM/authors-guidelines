@@ -1,0 +1,88 @@
+@font-face {
+    font-family: "Chalkboy";
+    src: url("fonts/Chalkboy.ttf") format("truetype");
+}
+
+h2[data-anchor-id="fair-data"] {
+    color: #311b92ff; /* Change to desired color (e.g., tomato red) */
+}
+
+h2[data-anchor-id="fair-software"] {
+    color: #00897b5c; /* Change to desired color (e.g., tomato red) */
+}
+h2[data-anchor-id="reproducible-results"] {
+    color: #ff6347; /* Change to desired color (e.g., tomato red) */
+}
+
+h2,
+h1 {
+    font-family: "Chalkboy", sans-serif;
+    font-weight: normal;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+h1,
+h2 {
+    text-align: center !important;
+}
+
+h1 {
+    font-size: 4em;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 1em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+a[id^="toc"].nav-link.active {
+    font-family: "Chalkboy", sans-serif;
+    font-weight: normal;
+    font-size: 1.5em;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+a[id^="toc"].nav-link {
+    font-family: "Chalkboy", sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.nav-link.active,
+.nav-link.active:hover {
+    color: #your-desired-color !important;
+    background-color: #your-bg-color !important;
+}
+/* Optional: override selection style */
+.nav-link.active::selection {
+    background-color: #ffd700;
+    color: #000;
+}
+
+.callout .callout-icon {
+    display: none !important;
+}
+
+/*
+#level-1-1 .callout-header {
+    background-color: #00897b5c;
+    color: #006064;
+    font-weight: 600;
+    border-left: 4px solid #007acc;
+}
+*/
+
+div.callout {
+    margin-bottom: 0.3em !important;
+    margin-top: 0 !important;
+}

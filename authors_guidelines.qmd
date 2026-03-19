@@ -1,0 +1,118 @@
+---
+title: "Computational Paper Guidelines"
+format:
+  html:
+    css: styles.css
+    toc: false
+    toc-location: left
+    toc-depth: 2
+    grid:
+        sidebar-width: 200px
+        body-width: 1500px
+    include-in-header: header.html
+
+---
+
+## FAIR Data
+
+---
+
+### Level 1
+- Data available in an accessible permanent repository (DOI)  
+- Free license (e.g., Creative Commons)  
+- File listing authors and contributors
+
+### Level 2
+- Open file formats (e.g., HDF5, NetCDF)  
+- Complete metadata file  
+- Documentation  
+
+### Level 3
+- Curation and validation ensuring consistency between content and paper  
+
+
+
+## FAIR Software
+
+### Level 1
+::: {.callout-note collapse="true"}
+# Code hosted on a forge with version, commit number or Zenodo DOI
+
+#### `git` forges:
+
+- **[GitLab](https://gitlab.com)** — Open-core; self-host or cloud; good CI/CD; FAIR-aligned transparency.
+- **[GitHub](https://github.com)** — Widely used; strong integration tools; limited openness (proprietary).
+- **[Codeberg](https://codeberg.org)** — Fully open-source (Gitea-based); privacy-friendly; EU-hosted.
+- **[SourceHut](https://sr.ht)** — Minimalist; open protocols; plain-text workflows; fully libre.
+- **[Bitbucket](https://bitbucket.org)** — Proprietary; integrates with Atlassian suite; less open.
+- **[Gitea](https://gitea.io)** — Lightweight, self-hosted, MIT-licensed; supports FAIR openness.
+- **[Forgejo](https://forgejo.org)** — Gitea fork; community-driven; strong open governance.
+- **[GRICAD GitLab](https://gricad-gitlab.univ-grenoble-alpes.fr/)** — Academic research-forge (Université Grenoble Alpes + CNRS + INRIA); local GitLab instance for research software. - **[IRD Forge](https://forge.ird.fr/)** — Institutional GitLab-based forge by Institut de recherche pour le développement (IRD); supports versioning, CI/CD, public/private code. :contentReference[oaicite:2]{index=2}
+- **[Forgejo / Fordj (France-specific interest)](https://code.gouv.fr/fr/bluehats/autres-forges/)** — Libre community-forge (via DINUM / BlueHats) for French public sector; open-source development. :contentReference[oaicite:4]{index=4}
+
+#### Getting version / git commit:
+
+- [Git commit](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
+- [GitHub commit](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits)
+- [Gilab commit](https://docs.gitlab.com/user/project/repository/commits/)
+- [Zenodo DOI, code archive](https://help.zenodo.org/docs/github/archive-software/github-upload/)
+
+#### Citation
+
+- README file: Doe, J., & Smith, A. (2025). *CoolSim: Climate simulation toolkit* (Version 2.3.1) [Computer software]. GitHub. Commit: 4f8a9d2. https://github.com/exampleuser/coolsim/tree/4f8a9d2
+
+- As a bibtex entry:
+```bib
+@software{Doe_CoolSim_2025,
+  author       = {Doe, John and Smith, Alice},
+  title        = {CoolSim: Climate simulation toolkit},
+  year         = {2025},
+  version      = {2.3.1},
+  url          = {https://github.com/exampleuser/coolsim/tree/4f8a9d2},
+  note         = {Commit 4f8a9d2b6e7c4e1a52d9e9e2f3c17b6a1d3f45ac},
+}
+```
+:::
+
+::: {.callout-note collapse="true"}
+# Free license
+
+The License must be clearly indicated in the root of the repository (**LICENSE/COPYING**).
+Exemple of valid licenses:
+
+- **[MIT License](https://opensource.org/licenses/MIT)** — Permissive; free reuse, modify, distribute; attribution only.
+- **[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)** — Permissive; attribution + patent grant; high interoperability.
+- **[BSD 3-Clause](https://opensource.org/licenses/BSD-3-Clause)** — Permissive; attribution + non-endorsement.
+- **[GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)** — Copyleft; derivatives must remain open.
+- **[LGPL-3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html)** — Copyleft; Lesser GPL permits use of the library in proprietary programs.
+- **[MPL-2.0](https://www.mozilla.org/en-US/MPL/2.0/)** — Weak copyleft; file-level openness; flexible reuse.
+- **[CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)** — Attribution; for data/docs; FAIR-compliant openness.
+
+:::
+
+::: {.callout-note collapse="true"}
+# Authors and contributors file
+
+:::
+
+### Level 2
+- Documented code (inline + user documentation)
+- “How to use it?” instructions (README, scripts, etc.)
+- Metadata file
+
+### Level 3
+- Examples
+- Automated tests
+- Functionality documentation (e.g., API documentation)
+
+
+## Reproducible Results
+
+### Level 1
+- Persistent identifier (commit, SWHID, DOI, etc.)
+- Reproducibility recipe (code execution + post-processing)
+- README and scripts 
+
+### Level 2
+- Full hardware/software environment (Guix, venv, requirements.txt, renv, etc.)
+- Workflow manager for reproducibility
