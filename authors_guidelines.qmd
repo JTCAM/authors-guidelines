@@ -35,6 +35,7 @@ format:
 ## FAIR Software
 
 ### Level 1
+
 ::: {.callout-note collapse="true"}
 # Code hosted on a forge with version, commit number or Zenodo DOI
 
@@ -92,6 +93,18 @@ Exemple of valid licenses:
 
 ::: {.callout-note collapse="true"}
 # Authors and contributors file
+
+The authors and contributors should be given with one or several of the following:
+
+- **`AUTHORS` file** — Plain text or Markdown file listing main authors and maintainers.
+  Example: `AUTHORS`, `AUTHORS.md`
+
+- **`CONTRIBUTORS` file** — Lists additional contributors or institutional credits.
+  Example: `CONTRIBUTORS`, `CONTRIBUTORS.md`
+
+- Within **`README` file** — Optional “Authors” or “Credits” section; human-readable summary.
+
+- Within **Version control management** — With clean commit history, the exact contributor list is metadata.
 
 :::
 
