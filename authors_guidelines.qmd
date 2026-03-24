@@ -55,14 +55,37 @@ The authors and contributors should be given with one or several of the followin
 :::
 
 ### Level 2
-- Open file formats (e.g., HDF5, NetCDF)  
-- Complete metadata file  
-- Documentation  
+
+::: {.callout-tip collapse="true"}
+# Open file formats
+ - e.g., HDF5, NetCDF
+ - find a website with list of acceptable things
+:::
+
+::: {.callout-tip collapse="true"}
+# metadata file
+
+- metadata extracted from file scanning (Solidipes, other examples, ...)
+- Open file formats
+- RO-crate format for storage of metadata
+:::
+
+::: {.callout-tip collapse="true"}
+# Documentation
+
+For complex and/or voluminous datasets documentation is necessary
+:::
 
 ### Level 3
-- Curation and validation ensuring consistency between content and paper  
 
+::: {.callout-tip collapse="true"}
+# Manuscript/dataset concordance
 
+Curation and validation ensuring consistency between content and paper
+
+- Can be human validation
+- Ontology based validation (using Solidipes)
+:::
 
 ## FAIR Software
 
