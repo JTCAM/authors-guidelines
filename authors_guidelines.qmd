@@ -18,8 +18,23 @@ format:
 ---
 
 ### Level 1
-- Data available in an accessible permanent repository (DOI)  
-- Free license (e.g., Creative Commons)  
+::: {.callout-tip collapse="true"}
+# Data available in an accessible permanent repository (DOI)
+
+- Zenodo
+- other institutional repositories (find examples)
+:::
+
+::: {.callout-tip collapse="true"}
+# Free license (e.g., Creative Commons)
+The License must be clearly indicated in the root of the repository (**LICENSE/COPYING**).  
+Exemple of valid licenses:
+
+- **[CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)** — Attribution; for data/docs; FAIR-compliant openness.
+
+- refine possibilities in CC-BY
+:::
+
 - File listing authors and contributors
 
 ### Level 2
@@ -109,15 +124,42 @@ The authors and contributors should be given with one or several of the followin
 :::
 
 ### Level 2
-- Documented code (inline + user documentation)
-- “How to use it?” instructions (README, scripts, etc.)
-- Metadata file
+::: {.callout-note collapse="true"}
+# Documented code
+
+There is API documentation (inline annotations) and a user/developper documentation.
+
+- [Doxygen](https://www.doxygen.nl)
+- [Sphinx](https://www.sphinx-doc.org) and [pydoc](https://docs.python.org/3/library/pydoc.html)
+- [JSDoc](https://jsdoc.app)
+- [Documenter.jl](https://juliadocs.github.io/Documenter.jl)
+- [rustdoc](https://doc.rust-lang.org/rustdoc/) and [Cargo doc]( https://doc.rust-lang.org/cargo/commands/cargo-doc.html)
+:::
+
+::: {.callout-note collapse="true"}
+# “How to use it?”
+
+- instructions
+- README
+- example scripts
+:::
+
+::: {.callout-note collapse="true"}
+# Metadata file
+:::
 
 ### Level 3
-- Examples
-- Automated tests
-- Functionality documentation (e.g., API documentation)
+::: {.callout-note collapse="true"}
+# Examples
+:::
 
+::: {.callout-note collapse="true"}
+# Automated tests
+:::
+
+::: {.callout-note collapse="true"}
+# Functionality documentation (e.g., API documentation)
+:::
 
 ## Reproducible Results
 
