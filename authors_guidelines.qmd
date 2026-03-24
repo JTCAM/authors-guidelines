@@ -35,7 +35,24 @@ Exemple of valid licenses:
 - refine possibilities in CC-BY
 :::
 
-- File listing authors and contributors
+::: {.callout-tip collapse="true"}
+# File listing authors and contributors
+
+The authors and contributors should be given with one or several of the following:
+
+- **`AUTHORS` file** — Plain text or Markdown file listing main authors and maintainers.
+  Example: `AUTHORS`, `AUTHORS.md`
+
+- **`CONTRIBUTORS` file** — Lists additional contributors or institutional credits.
+  Example: `CONTRIBUTORS`, `CONTRIBUTORS.md`
+
+- Within **`README` file** — Optional “Authors” or “Credits” section; human-readable summary.
+
+- Within **Version control management** — With clean commit history, the exact contributor list is metadata.
+  - add a warning regarding usability with heavy data
+
+
+:::
 
 ### Level 2
 - Open file formats (e.g., HDF5, NetCDF)  
