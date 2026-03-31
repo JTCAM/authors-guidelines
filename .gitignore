@@ -16,3 +16,5 @@ jtcam_badges_authors.html
 
 /.quarto/
 _site
+
+**/*.quarto_ipynb
