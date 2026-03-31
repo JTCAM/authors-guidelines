@@ -1,6 +1,6 @@
-#  README
-Repository for the documentation of the JTCAM reproducibility badges policy.
+#  JTCAM reproducibility badges policy
 
+https://jtcam.github.io/authors-guidelines/authors_guidelines.html
 
 ## 
 Repository for the documentation of the JTCAM reproducibility badges policy.
