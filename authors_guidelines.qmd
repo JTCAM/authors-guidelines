@@ -200,14 +200,14 @@ TODO
 ## Reproducible Results
 
 ### Level 1
-::: {.callout-tip collapse="true"}
+::: {.callout-caution collapse="true"}
 # Reproducibility recipe
 - README with instructions
 - Input accessible
 - Script for relaunching raw generation and post-analysis
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-caution collapse="true"}
 # Persistent identifier
 - GIT Repository
 - SWHID
@@ -216,7 +216,7 @@ TODO
 
 ### Level 2
 
-::: {.callout-tip collapse="true"}
+::: {.callout-caution collapse="true"}
 # Full hardware/software environment
 - `Guix` - a functional, reproducible, and transparent package manager. [Docs](https://guix.gnu.org/en/manual/)
 - `venv` - is a Python library for isolated environments. [Docs](https://docs.python.org/3/library/venv.html)
@@ -226,7 +226,7 @@ TODO
 - `renv` - is a project-managed R environment for reproducible research. [Docs](https://rstudio.github.io/renv/)
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-caution collapse="true"}
 # Workflow Managers
 
 1. **Nextflow**
