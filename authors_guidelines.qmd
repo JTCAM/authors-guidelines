@@ -18,14 +18,14 @@ format:
 ---
 
 ### Level 1
-::: {.callout-tip collapse="true"}
+::: {.callout-note collapse="true"}
 # Data available in an accessible permanent repository (DOI)
 
 - Zenodo
 - other institutional repositories (find examples)
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-note collapse="true"}
 # Free license (e.g., Creative Commons)
 The License must be clearly indicated in the root of the repository (**LICENSE/COPYING**).  
 Exemple of valid licenses:
@@ -35,19 +35,16 @@ Exemple of valid licenses:
 - refine possibilities in CC-BY
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-note collapse="true"}
 # File listing authors and contributors
 
 The authors and contributors should be given with one or several of the following:
 
 - **`AUTHORS` file** — Plain text or Markdown file listing main authors and maintainers.
   Example: `AUTHORS`, `AUTHORS.md`
-
 - **`CONTRIBUTORS` file** — Lists additional contributors or institutional credits.
   Example: `CONTRIBUTORS`, `CONTRIBUTORS.md`
-
 - Within **`README` file** — Optional “Authors” or “Credits” section; human-readable summary.
-
 - Within **Version control management** — With clean commit history, the exact contributor list is metadata.
   - add a warning regarding usability with heavy data
 
@@ -56,13 +53,13 @@ The authors and contributors should be given with one or several of the followin
 
 ### Level 2
 
-::: {.callout-tip collapse="true"}
+::: {.callout-note collapse="true"}
 # Open file formats
  - e.g., HDF5, NetCDF
  - find a website with list of acceptable things
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-note collapse="true"}
 # metadata file
 
 - metadata extracted from file scanning (Solidipes, other examples, ...)
@@ -70,7 +67,7 @@ The authors and contributors should be given with one or several of the followin
 - RO-crate format for storage of metadata
 :::
 
-::: {.callout-tip collapse="true"}
+::: {.callout-note collapse="true"}
 # Documentation
 
 For complex and/or voluminous datasets documentation is necessary
@@ -78,7 +75,7 @@ For complex and/or voluminous datasets documentation is necessary
 
 ### Level 3
 
-::: {.callout-tip collapse="true"}
+::: {.callout-note collapse="true"}
 # Manuscript/dataset concordance
 
 Curation and validation ensuring consistency between content and paper
@@ -91,7 +88,7 @@ Curation and validation ensuring consistency between content and paper
 
 ### Level 1
 
-::: {.callout-note collapse="true"}
+::: {.callout-tip collapse="true"}
 # Code hosted on a forge with version, commit number or Zenodo DOI
 
 #### `git` forges:
@@ -130,7 +127,7 @@ Curation and validation ensuring consistency between content and paper
 ```
 :::
 
-::: {.callout-note collapse="true"}
+::: {.callout-tip collapse="true"}
 # Free license
 
 The License must be clearly indicated in the root of the repository (**LICENSE/COPYING**).
@@ -146,25 +143,22 @@ Exemple of valid licenses:
 
 :::
 
-::: {.callout-note collapse="true"}
+::: {.callout-tip collapse="true"}
 # Authors and contributors file
 
 The authors and contributors should be given with one or several of the following:
 
 - **`AUTHORS` file** — Plain text or Markdown file listing main authors and maintainers.
   Example: `AUTHORS`, `AUTHORS.md`
-
 - **`CONTRIBUTORS` file** — Lists additional contributors or institutional credits.
   Example: `CONTRIBUTORS`, `CONTRIBUTORS.md`
-
 - Within **`README` file** — Optional “Authors” or “Credits” section; human-readable summary.
-
 - Within **Version control management** — With clean commit history, the exact contributor list is metadata.
 
 :::
 
 ### Level 2
-::: {.callout-note collapse="true"}
+::: {.callout-tip collapse="true"}
 # Documented code
 
 There is API documentation (inline annotations) and a user/developper documentation.
@@ -176,7 +170,7 @@ There is API documentation (inline annotations) and a user/developper documentat
 - [rustdoc](https://doc.rust-lang.org/rustdoc/) and [Cargo doc]( https://doc.rust-lang.org/cargo/commands/cargo-doc.html)
 :::
 
-::: {.callout-note collapse="true"}
+::: {.callout-tip collapse="true"}
 # “How to use it?”
 
 - instructions
@@ -184,30 +178,85 @@ There is API documentation (inline annotations) and a user/developper documentat
 - example scripts
 :::
 
-::: {.callout-note collapse="true"}
+::: {.callout-tip collapse="true"}
 # Metadata file
+
+TODO
 :::
 
 ### Level 3
-::: {.callout-note collapse="true"}
+::: {.callout-tip collapse="true"}
 # Examples
 :::
 
-::: {.callout-note collapse="true"}
+::: {.callout-tip collapse="true"}
 # Automated tests
 :::
 
-::: {.callout-note collapse="true"}
+::: {.callout-tip collapse="true"}
 # Functionality documentation (e.g., API documentation)
 :::
 
 ## Reproducible Results
 
 ### Level 1
-- Persistent identifier (commit, SWHID, DOI, etc.)
-- Reproducibility recipe (code execution + post-processing)
-- README and scripts 
+::: {.callout-tip collapse="true"}
+# Reproducibility recipe
+- README with instructions
+- Input accessible
+- Script for relaunching raw generation and post-analysis
+:::
+
+::: {.callout-tip collapse="true"}
+# Persistent identifier
+- GIT Repository
+- SWHID
+- DOI
+:::
 
 ### Level 2
-- Full hardware/software environment (Guix, venv, requirements.txt, renv, etc.)
-- Workflow manager for reproducibility
+
+::: {.callout-tip collapse="true"}
+# Full hardware/software environment
+- `Guix` - a functional, reproducible, and transparent package manager. [Docs](https://guix.gnu.org/en/manual/)
+- `venv` - is a Python library for isolated environments. [Docs](https://docs.python.org/3/library/venv.html)
+- `requirements.txt` - standard pip list of packages. [Docs](https://pip.pypa.io/en/stable/cli/pip_install/#requirements-file-format)  
+- `environment.yml` - Conda environment specification for Python + packages. [Docs](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-yml-file)  
+- `package.json` - main metadata + dependencies [Docs](https://docs.npmjs.com/cli/v9/configuring-npm/package-json)  
+- `renv` - is a project-managed R environment for reproducible research. [Docs](https://rstudio.github.io/renv/)
+:::
+
+::: {.callout-tip collapse="true"}
+# Workflow Managers
+
+1. **Nextflow**
+   - 📌 [https://www.nextflow.io](https://www.nextflow.io)
+   - 📦 GitHub: [https://github.com/nextflow-io/nextflow](https://github.com/nextflow-io/nextflow)
+   - ✅ Advanced: DSL2, containers, cloud support, bioinformatics focus.
+
+2. **Snakemake**
+   - 📌 [https://snakemake.readthedocs.io](https://snakemake.readthedocs.io)
+   - 📦 GitHub: [https://github.com/snakemake/snakemake](https://github.com/snakemake/snakemake)
+   - ✅ Python-based, rule-based, great for reproducibility and pipelines.
+
+3. **CWL (Common Workflow Language)**
+   - 📌 [https://www.commonwl.org](https://www.commonwl.org)
+   - 📦 GitHub: [https://github.com/common-workflow-language/common-workflow-language](https://github.com/common-workflow-language/common-workflow-language)
+   - ✅ Language-agnostic, portable, cloud-native.
+
+4. **WDL (Workflow Description Language)**
+   - 📌 [https://github.com/broadinstitute/wdl](https://github.com/broadinstitute/wdl)
+   - 📦 GitHub: [https://github.com/broadinstitute/wdl](https://github.com/broadinstitute/wdl)
+   - ✅ Developed by Broad Institute, used in Terra, GA4GH.
+
+5. **Airflow (Apache Airflow)**
+   - 📌 [https://airflow.apache.org](https://airflow.apache.org)
+   - 📦 GitHub: [https://github.com/apache/airflow](https://github.com/apache/airflow)
+   - ✅ Orchestration of complex data pipelines (not just science workflows).
+
+6. **Galaxy (Tool/Workflow Platform)**
+   - 📌 [https://galaxyproject.org](https://galaxyproject.org)
+   - 📦 GitHub: [https://github.com/galaxyproject/galaxy](https://github.com/galaxyproject/galaxy)
+   - ✅ GUI-driven, open, widely used in bioinformatics.
+
+:::
